@@ -36,7 +36,6 @@ const codeValue = function (countryCode){
 function merge (left, right) {
     let resultArray = [], leftIndex = 0, rightIndex = 0;
   
-   
     while (leftIndex < left.length && rightIndex < right.length) {
       if (codeValue(left[leftIndex].alpha3Code) < codeValue(right[rightIndex].alpha3Code)) {
         resultArray.push(left[leftIndex]);
@@ -59,12 +58,9 @@ function merge (left, right) {
     }
   
     const middle = Math.floor(unsortedArray.length / 2);
-  
-    
     const left = unsortedArray.slice(0, middle);
     const right = unsortedArray.slice(middle);
   
-   
     return merge(
       mergeSort(left), mergeSort(right)
     );
