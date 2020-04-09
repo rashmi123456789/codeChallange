@@ -12,13 +12,13 @@ const Four = require('./Four');
 res.writeHead(200, {"Content-Type": "text/plain"});
 
 if (page == '/One') {
-    const result = One.findDistance('AFG','LKA');
+    const result = One.findDistance('IND','AFG');
     res.write("Distance is :"+ result.toString()+" KMS");
 }
 
 else if (page == '/Two') {
-    const result = Two.closestNonNeighbourCountry('AFG');
-    res.write("Closest Non neighbour country is"+result.country +" and distance is "+ (result.distance).toString());
+    const result = Two.closestNonNeighbourCountry('IRN');
+    res.write("Closest Non neighbour country is "+result.country +" and distance is "+ (result.distance).toString());
 }
 
 else if (page == '/Three') {

@@ -12,16 +12,6 @@ const binarySearchGetCountry = function(countryCode){
         let midCountryCode = dS[mid].alpha3Code;
         let midCountryCodeValue = codeValue(midCountryCode);
 
-        if(((start - end) == 1) || ((end - start) ==1)){
-            if(codeValue(dS[start].alpha3Code) === searchCountryValue){
-                found = true;
-                return dS[start];
-            }else if(codeValue(dS[end].alpha3Code) === searchCountryValue){
-                found = true;
-                return dS[end];
-            }
-        }
-
         if(midCountryCodeValue > searchCountryValue){
             end = mid;
             
